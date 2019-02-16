@@ -17,7 +17,13 @@ html[data-useragent*='Mac OS X'] {
 
 body {
     background-color: #191919;
+    background-image:url('../img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
+
+
 
 /*.mfp-wrap {
     background-color: #191919;
@@ -440,7 +446,7 @@ a.image-popup-vertical-fit {
 }
 
 .contact-row {
-	padding-top: 4px;
+	padding-top: 19px;
 }
 
 .contact-row strong {
@@ -726,11 +732,29 @@ a.sketch:hover {
 
 
 
+
 @media screen and (min-width: 1920px) {
 
 }
 
 @media screen and (min-width: 1024px) {
+
+	/*слайдер работ в портфолио*/
+	.mfp-arrow-left {
+	    left: 78px!important;
+	}
+	
+	.mfp-arrow-right {
+	    right: 76px!important;
+	}
+
+	.mfp-title {
+	    font-family: 'HelveticaRegular';
+	    font-size: 16px;
+	    letter-spacing: 0.011em;
+	    text-align: center!important;
+	}
+
 	.social {
 		padding-top: 7px;
 	}
@@ -853,6 +877,7 @@ a.sketch:hover {
 
 	.contact .description p {
 		word-spacing: 1.8px;
+		line-height: 20px;
 	}
 
 	input.form-control {
@@ -907,7 +932,6 @@ a.sketch:hover {
 	.navbar-expand-lg .navbar-nav .nav-link {
 	    padding-right: 14.4px;
 	}
-
 }
 
 
@@ -916,12 +940,14 @@ a.sketch:hover {
 	nav {
 	    height: auto;
 	}
+	body {background-image: none;}
 }
 
 @media screen and (max-width: 768px) {
 	.home .photo {width: 100%;}
 	.footer-left-block span {line-height: 1.5em;}
 	.contact button.btn {margin-bottom: 15px;}
+
 }
 
 @media screen and (max-width: 576px) {
