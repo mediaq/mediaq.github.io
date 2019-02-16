@@ -110,7 +110,7 @@
 				<!-- ---------------------------------- -->
 				<!-- ----------- Industrial ----------- -->
 				<!-- ---------------------------------- -->
-				<div class="row industrial">
+				<div class="row industrial popup-gallery">
 					<div class="col-12 category-name">
 						<h2 class="w-100">Industrial</h2>
 					</div>
@@ -193,7 +193,7 @@
 				<!-- ------------------------------------------- -->
 				<!-- ----------- Commercial / Public ----------- -->
 				<!-- ------------------------------------------- -->
-				<div class="row commercial justify-content-center">
+				<div class="row commercial justify-content-center popup-gallery">
 					<div class="col-12 category-name">
 						<h2 class="w-100">Commercial / Public</h2>
 					</div>
@@ -218,7 +218,7 @@
 				<!-- ------------------------------- -->
 				<!-- ----------- Bridges ----------- -->
 				<!-- ------------------------------- -->
-				<div class="row bridges">
+				<div class="row bridges popup-gallery">
 					<div class="col-12 category-name">
 						<h2 class="w-100">Bridges</h2>
 					</div>
@@ -251,7 +251,7 @@
 				<!-- ------------------------------------- -->
 				<!-- ----------- Miscellaneous ----------- -->
 				<!-- ------------------------------------- -->
-				<div class="row miscellaneous ">
+				<div class="row miscellaneous popup-gallery">
 					<div class="col-12 category-name">
 						<h2 class="w-100">Miscellaneous</h2>
 					</div>
@@ -386,40 +386,17 @@
     	});
 
     	$(document).ready(function() {
-
-    		$('.image-popup-vertical-fit').magnificPopup({
+    		$('.popup-gallery').magnificPopup({
+    			delegate: 'a',
     			type: 'image',
-    			closeOnContentClick: true,
+    			tLoading: 'Loading image #%curr%...',
     			mainClass: 'mfp-img-mobile',
-    			image: {
-    				verticalFit: true
-    			}
-    			
-    		});
-
-    		$('.image-popup-fit-width').magnificPopup({
-    			type: 'image',
-    			closeOnContentClick: true,
-    			image: {
-    				verticalFit: false
-    			}
-    		});
-
-    		$('.image-popup-no-margins').magnificPopup({
-    			type: 'image',
-    			closeOnContentClick: true,
-    			closeBtnInside: false,
-    			fixedContentPos: true,
-    			mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
-    			image: {
-    				verticalFit: true
-    			},
-    			zoom: {
+    			gallery: {
     				enabled: true,
-    				duration: 300 // don't foget to change the duration also in CSS
-    			}
+    				navigateByImgClick: true,
+    				preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+    			},
     		});
-
     	});
     </script>
   </body>
