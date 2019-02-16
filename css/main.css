@@ -733,20 +733,20 @@ a.sketch:hover {
 
 
 
-@media screen and (min-width: 1920px) {
-
+@media screen and (min-width: 1920px) and (max-width: 2500px){
+	.mfp-arrow-left {
+	    left: 19%!important;
+	}
+	
+	.mfp-arrow-right {
+	    right: 19%!important;
+	}
 }
 
 @media screen and (min-width: 1024px) {
 
 	/*слайдер работ в портфолио*/
-	.mfp-arrow-left {
-	    left: 78px!important;
-	}
-	
-	.mfp-arrow-right {
-	    right: 76px!important;
-	}
+
 
 	.mfp-title {
 	    font-family: 'HelveticaRegular';
